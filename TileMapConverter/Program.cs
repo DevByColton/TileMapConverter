@@ -57,7 +57,7 @@ namespace TileMapConverter
                             cols.Add(new TileColumn
                             {
                                 HasCollider = columnData[0] == "c",
-                                ColliderGroupDirection = ColliderGroupDirectionMapper.Get(columnData[1]),
+                                ColliderType = ColliderTypeMapper.Get(columnData[1]),
                                 TextureName = columnData[2]
                             });
                         }

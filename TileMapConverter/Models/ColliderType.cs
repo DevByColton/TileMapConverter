@@ -1,6 +1,6 @@
 ﻿namespace TileMapConverter.Models;
 
-public enum ColliderGroupDirection
+public enum ColliderType
 {
     Vertical,
     Horizontal,
@@ -8,19 +8,19 @@ public enum ColliderGroupDirection
     None
 }
 
-public static class ColliderGroupDirectionMapper
+public static class ColliderTypeMapper
 {
-    public static ColliderGroupDirection Get(string direction)
+    public static ColliderType Get(string direction)
     {
         if (string.IsNullOrEmpty(direction))
             throw new Exception("Collider group direction string is empty!");
             
         switch (direction)
         {
-            case "v": return ColliderGroupDirection.Vertical;
-            case "h": return ColliderGroupDirection.Horizontal;
-            case "b": return ColliderGroupDirection.Box;
-            case "n": return ColliderGroupDirection.None;
+            case "v": return ColliderType.Vertical;
+            case "h": return ColliderType.Horizontal;
+            case "b": return ColliderType.Box;
+            case "n": return ColliderType.None;
             default: throw new Exception($"Collider group direction of {direction} is not properly mapped!");
         }
     }

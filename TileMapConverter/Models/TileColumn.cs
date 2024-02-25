@@ -2,7 +2,7 @@
 
 public class TileColumn
 {
-    public ColliderGroupDirection ColliderGroupDirection { get; set; }
+    public ColliderType ColliderType { get; set; }
     public bool HasCollider { get; set; }
     public string TextureName { get; set; }
 }
